@@ -1,11 +1,6 @@
-import 'zone.js/node';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { provideServerRendering } from '@angular/platform-server';
+import { AppServerModule } from './app/app.server.module';
+import { enableProdMode } from '@angular/core';
 
-import { AppComponent } from './app/app.component';
+enableProdMode();
 
-bootstrapApplication(AppComponent, {
-  ...appConfig,
-  providers: [provideServerRendering()]
-});
+export { AppServerModule };

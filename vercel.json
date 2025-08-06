@@ -1,11 +1,11 @@
-
-
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "npm run build:ssr",
+  "outputDirectory": "dist/ecommerce/browser",
+  "routes": [
     {
-      "src": "angular.json",
-      "use": "@vercel/angular"
+      "src": "/(.*)",
+      "dest": "dist/ecommerce/server/server.mjs"
     }
   ]
 }

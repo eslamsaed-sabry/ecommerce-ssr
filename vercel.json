@@ -1,6 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run build:ssr",
+  "installCommand": "npm install --legacy-peer-deps",
   "outputDirectory": "dist/ecommerce/browser",
   "routes": [
     {

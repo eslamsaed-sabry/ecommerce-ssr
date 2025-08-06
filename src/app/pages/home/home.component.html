@@ -1,0 +1,90 @@
+<section>
+    <div class="grid md:grid-cols-[70%_minmax(0,1fr)]">
+        <div>
+            <owl-carousel-o [options]="mainSliderOptions">
+                <ng-template carouselSlide><img src="images/slider-1.png" class="w-full h-[300px]" alt=""></ng-template>
+                <ng-template carouselSlide><img src="images/slider-4.jpeg" class="w-full h-[300px]"
+                        alt=""></ng-template>
+                <ng-template carouselSlide><img src="images/slider-5.jpeg" class="w-full h-[300px]"
+                        alt=""></ng-template>
+            </owl-carousel-o>
+        </div>
+        <div>
+            <img src="images/slider-2.jpeg" class="w-full h-[150px]" alt="">
+            <img src="images/slider-3.jpeg" class="w-full h-[150px]" alt="">
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <owl-carousel-o [options]="customOptions">
+
+        @for (cate of myCategory; track cate._id) {
+        <ng-template carouselSlide>
+            <div class="relative group ">
+                <img [src]="cate.image"
+                    class="w-full object-cover h-[350px] group-hover:rotate-y-[180deg] transition-all duration-[2s]"
+                    [alt]="cate.name">
+                <div
+                    class="absolute opacity-0 w-full h-full text-green-600 top-[100%] group-hover:opacity-[100%] group-hover:top-0 group-hover:bg-amber-50/50 flex transition-all duration-[1s] justify-center items-center text-2xl  ">
+                    <h3 class="px-3"> {{cate.name}} </h3>
+                </div>
+            </div>
+        </ng-template>
+        }
+
+    </owl-carousel-o>
+</section>
+
+<section class="my-15">
+
+    <h3 class="text-center text-2xl text-teal-500">{{'home.products' | translate }}:</h3>
+
+    <input type="text" placeholder="{{'home.search' | translate }}...." [(ngModel)]="searchItem"
+        class="bg-gray-50 border my-4 border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 mx-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
+        @for (prod of myProducts.slice(0,20)|search:searchItem; track prod._id ) {
+        <div
+            class="card rounded-md overflow-hidden  shadow-xl relative p-1 py-15 border border-transparent hover:border-green-400 hover:border group transition-all duration-300">
+            <div [routerLink]="['/details' , prod._id]" class="group relative peer">
+                <div class="card-img">
+                    <img [src]="prod.imageCover" class="w-full h-[250px] object-contain" alt="">
+                </div>
+                <div class="card-body text-green-900 px-2 py-4 flex flex-col items-center text-2xl ">
+                    <h4> {{prod.category.name}} </h4>
+                    <h3 class="font-medium "> {{prod.title.split(" ", 2).join(' ')}} </h3>
+                    <div class="flex justify-between items-center ">
+                        <span> {{prod.price}} {{'home.egp' | translate }}</span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-300"></i>
+                            <span> {{prod.ratingsAverage}} </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex justify-end ">
+                <a class="fa-solid fa-heart text-3xl cursor-pointer"
+                    [ngClass]="prod.isFavorite ? 'text-red-600' : 'text-black'" (click)="toggleWishlist(prod)">
+                </a>
+            </div>
+            
+            <div
+                class="absolute transition-all duration-[2s] -bottom-[15%] group-hover:bottom-[5%] w-full left-1/2 transform -translate-x-1/2">
+
+                <div class="flex justify-center">
+                    <button (click)="addProductToCart(prod._id)"
+                        class=" py-2 px-4 text-white rounded-lg  block bg-green-700 cursor-pointer ">
+                        {{'home.addCart' | translate }}
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        }
+    </div>
+</section>

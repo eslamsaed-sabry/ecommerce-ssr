@@ -1,0 +1,31 @@
+<section class="w-1/2 mx-auto py-5 bg-gray-400">
+    <h1 class="text-center font-medium fa-2xl text-green-600 py-3">pay now</h1>
+    <form [formGroup]="payForm" (submit)="submitFoem()">
+
+        <div class="mb-3 px-3">
+            <label for="uDetails" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">detalis :</label>
+            <input formControlName="details" type="text" id="uDetails"
+            class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="mb-3 px-3">
+            <label for="uPhone" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">phone :</label>
+            <input formControlName="phone" type="tel" id="uPhone"
+            class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="mb-3 px-3">
+            <label for="uCity" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">city :</label>
+            <input formControlName="city" type="text" id="uCity"
+            class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+       
+     
+    
+        <div class="text-center flex items-center justify-between px-5">
+            <button type="submit" [disabled]="payForm.invalid"
+            class="bg-green-600 py-2 px-4 cursor-pointer rounded-2xl text-white text-center  hover:bg-green-400 transition disabled:bg-green-200 disabled:cursor-default">
+            submit
+           
+        </button>
+        </div>
+    </form>
+</section>

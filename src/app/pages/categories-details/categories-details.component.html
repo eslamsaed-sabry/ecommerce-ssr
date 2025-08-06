@@ -1,0 +1,18 @@
+<h2 class="text-2xl mt-5 mb-10 text-center text-green-500">Subcategories</h2>
+<section class="bg-gray-400/10 py-15 rounded-2xl">
+@if(!(subcategories == 0)){
+
+    <div class="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        @for (sub of subcategories; track sub._id) {
+        <div
+            class="card bg-white mx-10 rounded-md overflow-hidden shadow-lg border border-transparent hover:shadow-green-400 hover:border-green-400 hover:border-2 transition-all duration-[1s] p-4">
+            <h4 class="text-xl text-center text-green-600">{{ sub.name }}</h4>
+        </div>
+        }
+    </div>
+
+}@else {
+<p class="text-3xl text-center text-red-600">no Data</p>
+
+}
+</section>

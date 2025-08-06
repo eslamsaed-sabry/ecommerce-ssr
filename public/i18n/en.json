@@ -1,0 +1,102 @@
+{
+    "navbar": {
+        "home": "home",
+        "cart": "cart",
+        "wishlist": "wishlist",
+        "products": "products",
+        "categories": "categories",
+        "brands": "brands",
+        "signOut": "signOut",
+        "login": "login",
+        "register": "register",
+        "changeLang": "change Lang",
+        "English": "English",
+        "Arabic": "Arabic"
+    },
+    "login": {
+        "login": "login",
+        "email": "email",
+        "password": "password",
+        "forgotPassword": "forgot Password"
+    },
+    "forgotPassword": {
+        "email": "email",
+        "code": "code",
+        "resetpassword": "reset password",
+        "submit": "submit",
+        "newpassword": "new password"
+    },
+    "register": {
+        "email": "email",
+        "name": "name",
+        "password": "password",
+        "rePassword": "rePassword",
+        "phone": "phone",
+        "register": "register",
+        "registerNow": "register now",
+        "Danger": "Danger",
+        "ensure": "Ensure that these requirements are met",
+        "nameRequired": "name is required",
+        "nameGreater": "name must be greater then 3 characters",
+        "nameLess": "name must be greater then 3 characters",
+        "emailRequired": "email is required",
+        "emailInvalid": "email invalid",
+        "passwordRequired": "password is required",
+        "passwordCharact": "password must start with capital letter and least 8 characters",
+        "rePasswordRequired": "repassword is required",
+        "rePasswordMatch": "password and rePassword is not match",
+        "phoneRequired": "phone is required",
+        "phoneEgypt": "phone is required"
+    },
+    "footer": {
+        "getApp": "get the freshcart app",
+        "sendLink": "we will send a link , open it on your phone to download the app",
+        "email": "email",
+        "shareLink": "share app link",
+        "Deliveries": "Get Deliveries with freshcart",
+        "payment": "payment partners"
+    },
+    "home": {
+        "products": "popular products",
+        "egp": "EGP",
+        "addCart": "Add to cart",
+        "search": "search"
+    },
+    "cart": {
+        "shopCart": "shop cart",
+        "totalCart": "total cart price",
+        "title": "title",
+        "price": "price",
+        "remove": "remove",
+        "payment": "payment",
+        "cartEmpty": "cart is empty",
+        "clear": "clear cart"
+    },
+    "wishList": {
+        "wishList": "My wish List",
+        "title": "title",
+        "price": "price",
+        "remove": "remove",
+        "addCart": "Add to cart"
+    },
+    "products": {
+        "products": "popular products",
+        "egp": "EGP",
+        "addCart": "Add to cart",
+        "search": "search"
+    },
+    "categories": {
+        "categories": "categories"
+    },
+    "brands": {
+        "brands": "all brands"
+    },
+    "brandsDetalis": {
+        "noDate": "no data"
+    },
+    "productDetalis": {
+        "products": "Product Details",
+        "egp": "EGP",
+        "addCart": "Add to cart"
+    }
+}

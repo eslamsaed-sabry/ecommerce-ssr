@@ -1,0 +1,102 @@
+{
+    "navbar": {
+        "home": "الرئيسية",
+        "cart": "عربة التسوق",
+        "wishlist": "قائمة الرغبات",
+        "products": "المنتجات",
+        "categories": "التصنيفات",
+        "brands": "العلامات التجارية",
+        "signOut": "تسجيل الخروج",
+        "login": "تسجيل الدخول",
+        "register": "إنشاء حساب",
+        "changeLang": "تغيير اللغة",
+        "English": "الإنجليزية",
+        "Arabic": "العربية"
+    },
+    "login": {
+        "login": "تسجيل الدخول",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "forgotPassword": "هل نسيت كلمة المرور؟"
+    },
+    "forgotPassword": {
+        "email": "البريد الإلكتروني",
+        "code": "الرمز",
+        "resetpassword": "إعادة تعيين كلمة المرور",
+        "submit": "إرسال",
+        "newpassword": "كلمة المرور الجديدة"
+    },
+    "register": {
+        "email": "البريد الإلكتروني",
+        "name": "الاسم",
+        "password": "كلمة المرور",
+        "rePassword": "تأكيد كلمة المرور",
+        "phone": "رقم الهاتف",
+        "register": "تسجيل",
+        "registerNow": "سجّل الآن",
+        "Danger": "تحذير",
+        "ensure": "تأكد من استيفاء المتطلبات التالية",
+        "nameRequired": "الاسم مطلوب",
+        "nameGreater": "يجب أن يكون الاسم أطول من 3 أحرف",
+        "nameLess": "يجب أن يكون الاسم أطول من 3 أحرف",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailInvalid": "بريد إلكتروني غير صالح",
+        "passwordRequired": "كلمة المرور مطلوبة",
+        "passwordCharact": "يجب أن تبدأ كلمة المرور بحرف كبير وتتكون من 8 أحرف على الأقل",
+        "rePasswordRequired": "تأكيد كلمة المرور مطلوب",
+        "rePasswordMatch": "كلمة المرور وتأكيدها غير متطابقين",
+        "phoneRequired": "رقم الهاتف مطلوب",
+        "phoneEgypt": "رقم الهاتف يجب أن يكون مصري"
+    },
+    "footer": {
+        "getApp": "حمّل تطبيق فريش كارت",
+        "sendLink": "سوف نرسل لك رابطًا، افتحه على هاتفك لتحميل التطبيق",
+        "email": "البريد الإلكتروني",
+        "shareLink": "مشاركة رابط التطبيق",
+        "Deliveries": "احصل على التوصيلات مع فريش كارت",
+        "payment": "شركاء الدفع"
+    },
+    "home": {
+        "products": "المنتجات الشائعة",
+        "egp": "جنيه",
+        "addCart": "أضف إلى العربة",
+        "search": "البحث"
+    },
+    "cart": {
+        "shopCart": "عربة التسوق",
+        "totalCart": "إجمالي سعر العربة",
+        "title": "العنوان",
+        "price": "السعر",
+        "remove": "إزالة",
+        "payment": "الدفع",
+        "cartEmpty": "العربة فارغة",
+        "clear": "تفريغ العربة"
+    },
+    "wishList": {
+        "wishList": "قائمة رغباتي",
+        "title": "العنوان",
+        "price": "السعر",
+        "remove": "إزالة",
+        "addCart": "أضف إلى العربة"
+    },
+    "products": {
+        "products": "المنتجات الشائعة",
+        "egp": "جنيه",
+        "addCart": "أضف إلى العربة",
+        "search": "البحث"
+    },
+    "categories": {
+        "categories": "التصنيفات"
+    },
+    "brands": {
+        "brands": "العلامات التجارية"
+    },
+    "brandsDetalis": {
+        "noDate": "لا توجد بيانات"
+    },
+    "productDetalis": {
+        "products": "المنتجات الشائعة",
+        "egp": "جنيه",
+        "addCart": "أضف إلى العربة"
+    }
+}

@@ -1,0 +1,29 @@
+<section class="w-[75%] mx-auto">
+    <h1 class="text-center text-green-600 text-4xl">    </h1>
+ @for (prod of wishList.data; track prod.id) {
+    <div class="grid md:grid-cols-[10%_minmax(0,1fr)] my-5 gap-4 border-b">
+        <div>
+            <img [src]="prod.imageCover" class="w-full h-[100px] object-contain mb-5" [alt]="">
+        </div>
+        <div class="flex justify-between items-center">
+            <div>
+                <h3>{{'wishList.title' | translate }} : {{prod.title}} </h3>
+                <h4 class="text-green-500">{{'wishList.price' | translate }} :{{prod.price}} </h4>
+                <button (click)="deleteItem(prod._id)" class="cursor-pointer">
+                    <i class="fas fa-trash-can text-green-600"></i> {{'wishList.remove' | translate }}
+                </button>
+            </div>
+            <div class="flex items-center gap-3">
+                  <button (click)="addProductToCart(prod._id)"
+                    class=" py-2 px-4 text-white rounded-lg  block bg-green-700 cursor-pointer ">
+                    {{'wishList.addCart' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+    } 
+
+
+
+
+</section>

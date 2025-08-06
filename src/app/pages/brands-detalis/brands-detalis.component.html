@@ -1,0 +1,16 @@
+<section class="bg-gray-400/10  rounded-2xl">
+    @if(subBrand) {
+    <div
+            class="card py-5 rounded-md overflow-hidden shadow-lg  border border-transparent hover:shadow-green-400 hover:border-green-400 hover:border-2 transition-all duration-[1s]">
+        
+        <div>
+            <img [src]="subBrand.image" class="w-full h-[250px] object-contain" [alt]="subBrand.name">
+        </div>
+        <div>
+            <h4 class="my-5 text-2xl text-center text-green-400"> {{subBrand.name}} </h4>
+        </div>
+    </div>
+    } @else {
+    <p class="text-3xl text-center text-red-600">{{'brandsDetalis.noDate' | translate }}</p>
+    }
+</section>

@@ -1,0 +1,75 @@
+<section class="w-1/2 mx-auto py-5 bg-gray-400">
+    <h1 class="text-center font-medium fa-2xl text-green-600 py-3">{{'forgotPassword.resetpassword' | translate }}</h1>
+   
+   @if (step == 1 ) {
+       <form [formGroup]="forgotPasswordForm" (ngSubmit)="forgotPass()">
+   
+           <div class="mb-3 px-3">
+               <label for="uEmail" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">{{'forgotPassword.email' | translate }}</label>
+               <input formControlName="email" type="email" id="uEmail"
+               class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                
+           </div>
+       
+   
+           <div class="text-center flex items-center justify-between px-5">
+               <button type="submit"  
+               class="bg-green-600 py-2 px-4 cursor-pointer rounded-2xl text-white text-center  hover:bg-green-400 transition disabled:bg-green-200 disabled:cursor-default">
+               {{'forgotPassword.submit' | translate }}
+            
+           </button>
+           </div>
+       </form>
+   }
+
+
+   @if (step ==2) {
+       <form [formGroup]="verifyCodeForm" (ngSubmit)="verifyCode()">
+   
+           <div class="mb-3 px-3">
+               <label for="uCode" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">{{'forgotPassword.code' | translate }} :</label>
+               <input formControlName="resetCode" type="text" id="uCode"
+               class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                
+           </div>
+       
+   
+           <div class="text-center flex items-center justify-between px-5">
+               <button type="submit"  
+               class="bg-green-600 py-2 px-4 cursor-pointer rounded-2xl text-white text-center  hover:bg-green-400 transition disabled:bg-green-200 disabled:cursor-default">
+               {{'forgotPassword.submit' | translate }}
+            
+           </button>
+           </div>
+       </form>
+   }
+
+
+   @if (step ==3) {
+       <form [formGroup]="resetPasswordForm" (ngSubmit)="resetPass()">
+   
+           <div class="mb-3 px-3">
+               <label for="uconfirmEmail" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">{{'forgotPassword.email' | translate }} :</label>
+               <input readonly formControlName="email" type="email" id="uconfirmEmail"
+               class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                
+           </div>
+           <div class="mb-3 px-3">
+               <label for="uconfirmpassword" class="block mb-2 text-sm font-medium text-gray-200 dark:text-white">{{'forgotPassword.newpassword' | translate }} :</label>
+               <input formControlName="newPassword" type="password" id="uconfirmpassword"
+               class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                
+           </div>
+       
+   
+           <div class="text-center flex items-center justify-between px-5">
+               <button type="submit"  
+               class="bg-green-600 py-2 px-4 cursor-pointer rounded-2xl text-white text-center  hover:bg-green-400 transition disabled:bg-green-200 disabled:cursor-default">
+               {{'forgotPassword.submit' | translate }}
+            
+           </button>
+           </div>
+       </form>
+
+   }
+</section>

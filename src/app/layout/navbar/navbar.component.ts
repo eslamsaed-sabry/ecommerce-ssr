@@ -29,23 +29,24 @@ export class NavbarComponent implements OnInit {
   private platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
+    if(this.isLoggedIn()){
+      this.getCart()
+    }
     this.flowbiteService.loadFlowbite((flowbite) => {
       initFlowbite();
     });
-
-    this.cartService.cartNamber.subscribe({
-      next: (value) => {
-        this.numberOfItems = value;
-      }
-    });
-
-    if (isPlatformBrowser(this.platformId)) {
-      this.cartService.getLoggedUserCart().subscribe({
+  }
+  getCart(){
+       this.cartService.getLoggedUserCart().subscribe({
         next: (res) => {
           this.cartService.cartNamber.next(res.numOfCartItems)
         }
       });
-    }
+      this.cartService.cartNamber.subscribe({
+      next: (value) => {
+        this.numberOfItems = value;
+      }
+    });
   }
 
   changeLang(lang: string): void {
